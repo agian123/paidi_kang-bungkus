@@ -8,11 +8,7 @@ exit 1
 fi
 red='\e[1;31m'
 green='\e[0;32m'
-NC='\e[0m'
-MYIP=$(wget -qO- icanhazip.com);
-echo "Checking VPS"
-IZIN=$( curl https://pastebin.com/raw/UaZQbLaN | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
+NC='\e[0;33m'
 echo -e "${green}Permission Accepted...${NC}"
 else
 echo -e "${green}Permission Accepted...${NC}"
